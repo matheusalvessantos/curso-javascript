@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onde você mora?</title>
+  </head>
+  <body>
+    <h1>Em qual país você mora?</h1>
+    <h2>Complete:</h2>
+    Eu moro <input type="text" name="país" id="país" />
+    <input type="button" value="Verificar" onclick="calcular()" />
+    <div id="res"></div>
+    <script>
+      function calcular() {
+        var cidade = document.querySelector('input#país')
+        var res = document.querySelector('div#res')
+        var resp = cidade.value
+        res.innerHTML = `<p>Você mora <strong>${resp}</strong>!</p>`
+        if (brasil) {
+          resp.innerHTML = +`Você é Brasileiro`
+        }
+      }
+    </script>
+  </body>
+</html>
